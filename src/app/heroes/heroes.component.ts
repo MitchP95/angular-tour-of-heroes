@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./heroes.component.scss']
 })
 export class HeroesComponent {
+  hero = 'Windstorm';
 
+  constructor() {}
+
+  ngOnInit(): void {
+
+  }
 }

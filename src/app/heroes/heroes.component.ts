@@ -29,6 +29,9 @@ export class HeroesComponent {
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
     this.messageService.add(
-      'HeroesComponent: Selected hero id=' + hero.id);
+      // using template literals with $ and single {}
+      `HeroesComponent: Selected hero id=${hero.id}`
+      //"HeroesComponent: Selected hero id={{hero.id}}" double quotes and {{}} also works
+      );
   }
 }

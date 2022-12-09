@@ -6,8 +6,8 @@ import { Hero } from './hero';
   providedIn: 'root'
 })
 export class InMemoryDataService implements InMemoryDbService {
-  createDb(): Hero[] {
-    const heroes: Hero[] = [
+  createDb() {
+    const heroes = [
       { id: 12, name: 'Dr. Nice' },
       { id: 13, name: 'Bombasto' },
       { id: 14, name: 'Celeritas' },
@@ -19,9 +19,7 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 20, name: 'Tornado' }
     ];
 
-    console.log(`Created DB ${heroes}`);
-
-    return heroes;
+    return {heroes};
   }
 
   genId(heroes: Hero[]): number {

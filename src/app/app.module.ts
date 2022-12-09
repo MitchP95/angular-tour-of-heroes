@@ -23,15 +23,15 @@ import { InMemoryDataService } from './in-memory-data.service';
   imports: [
     BrowserModule,
     FormsModule,
+    AppRoutingModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, {
         dataEncapsulation: false 
       }
-    ),
-    AppRoutingModule
+    )
   ],
-  providers: [InMemoryDataService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

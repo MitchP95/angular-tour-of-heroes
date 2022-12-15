@@ -31,7 +31,15 @@ export class HeroesComponent {
     this.messageService.add(
       // using template literals with $ and single {}
       `HeroesComponent: Selected hero id=${hero.id}`
-      //"HeroesComponent: Selected hero id={{hero.id}}" double quotes and {{}} also works
       );
+  }
+
+  add(name: string): void {
+    name = name.trim();
+    if (!name) {return;}
+    this.heroService.addHero({name} as Hero)
+      .subscribe(hero => {
+        this.heroes.push(hero);
+      });
   }
 }
